@@ -59,7 +59,7 @@ contract HomeWorks is ERC721Enumerable, PriceOFMATICTOUSD, Ownable {
     function mint(uint256 _mintAmount) public payable {
         uint256 supply = totalSupply();
         require(!paused);
-        require(getconversionRate(msg.value) > cost * _mintAmount, "Insufficient ETH");
+        require(getconversionRate(msg.value) > cost * _mintAmount, "Insufficient Matic");
         require(_mintAmount > 0 && _mintAmount <= maxMintAmount);
 
         require(supply + _mintAmount <= maxSupply);
