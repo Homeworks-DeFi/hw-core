@@ -43,7 +43,7 @@ contract HomeWorks is ERC721Enumerable, PriceOFMATICTOUSD, Ownable {
     bool public revealed = false;
     string public notRevealedUri;
     string public _name = "The Fort Greene Collection";
-    string public _symbol = "";
+    string public _symbol = "FGC";
 
     constructor(string memory _initBaseURI, string memory _initNotRevealedUri) ERC721(_name, _symbol) {
         setBaseURI(_initBaseURI);
